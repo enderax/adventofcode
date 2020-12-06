@@ -33,6 +33,7 @@ for line in lines:
 			continue
 		elif not (2020 <= int(l['eyr']) <= 2030):
 			continue
+		#165cm , 72in
 		elif not ((str(l['hgt']).endswith('cm') and 150 <= int(re.findall('\d+',l['hgt'])[0]) <= 193) or (str(l['hgt']).endswith('in') and 59 <= int(re.findall('\d+',l['hgt'])[0]) <= 76)):
 			continue
 		elif not (re.search('#[0-9a-f]{6}',l['hcl'])):
